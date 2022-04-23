@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/ndarray-base-expand-dimensions",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Expand the shape of an array by inserting a new dimension of size one at a specified axis.",
   "license": "Apache-2.0",
   "author": {
