@@ -34,32 +34,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-base-expand-dimensions
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-expandDimensions = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-expand-dimensions@umd/bundle.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-expand-dimensions@umd/bundle.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.expandDimensions;
-})();
-</script>
+var expandDimensions = require( '@stdlib/ndarray-base-expand-dimensions' );
 ```
 
 #### expandDimensions( x, axis )
@@ -119,16 +117,11 @@ sh = y.shape;
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@umd/bundle.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-numel@umd/bundle.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ind2sub@umd/bundle.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-expand-dimensions@umd/bundle.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var array = require( '@stdlib/ndarray-array' );
+var numel = require( '@stdlib/ndarray-base-numel' );
+var ind2sub = require( '@stdlib/ndarray-ind2sub' );
+var expandDimensions = require( '@stdlib/ndarray-base-expand-dimensions' );
 
 // Create a 2-dimensional array:
 var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
@@ -150,11 +143,6 @@ var i;
 for ( i = 0; i < N; i++ ) {
     console.log( 'Y[%s] = %d', ind2sub( sh, i ).join( ', ' ), y.iget( i ) );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -242,6 +230,7 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 [deno-url]: https://github.com/stdlib-js/ndarray-base-expand-dimensions/tree/deno
 [umd-url]: https://github.com/stdlib-js/ndarray-base-expand-dimensions/tree/umd
 [esm-url]: https://github.com/stdlib-js/ndarray-base-expand-dimensions/tree/esm
+[branches-url]: https://github.com/stdlib-js/ndarray-base-expand-dimensions/blob/main/branches.md
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-base-expand-dimensions/main/LICENSE
 
