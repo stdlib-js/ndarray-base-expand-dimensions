@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import expandDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-expand-dimensions@esm/index.mjs';
+import expandDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-expand-dimensions@v0.1.0-esm/index.mjs';
 ```
 
 #### expandDimensions( x, axis )
@@ -121,7 +121,7 @@ sh = y.shape;
 import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@esm/index.mjs';
 import numel from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-numel@esm/index.mjs';
 import ind2sub from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ind2sub@esm/index.mjs';
-import expandDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-expand-dimensions@esm/index.mjs';
+import expandDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-expand-dimensions@v0.1.0-esm/index.mjs';
 
 // Create a 2-dimensional array:
 var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
