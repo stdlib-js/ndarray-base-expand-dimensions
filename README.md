@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import expandDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-expand-dimensions@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/ndarray-base-expand-dimensions/tags). For example,
+
+```javascript
 import expandDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-expand-dimensions@v0.2.1-deno/mod.js';
 ```
 
@@ -116,7 +121,7 @@ sh = y.shape;
 import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@deno/mod.js';
 import numel from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-numel@deno/mod.js';
 import ind2sub from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ind2sub@deno/mod.js';
-import expandDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-expand-dimensions@v0.2.1-deno/mod.js';
+import expandDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-expand-dimensions@deno/mod.js';
 
 // Create a 2-dimensional array:
 var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
