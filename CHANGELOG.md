@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-12-01)
+## Unreleased (2025-01-11)
+
+<section class="bug-fixes">
+
+### Bug Fixes
+
+-   [`712a9a8`](https://github.com/stdlib-js/stdlib/commit/712a9a8554f59fdfe520c4e2daafdbfd93637c76) - compute singleton strides as if strides computed apriori
+
+</section>
+
+<!-- /.bug-fixes -->
 
 <section class="commits">
 
@@ -12,6 +22,8 @@
 
 <details>
 
+-   [`712a9a8`](https://github.com/stdlib-js/stdlib/commit/712a9a8554f59fdfe520c4e2daafdbfd93637c76) - **fix:** compute singleton strides as if strides computed apriori _(by Athan Reines)_
+-   [`c634089`](https://github.com/stdlib-js/stdlib/commit/c634089f1fdf724c589c016b55da015a1d779709) - **refactor:** use ndarray utility to normalize an index _(by Athan Reines)_
 -   [`2c4e5d8`](https://github.com/stdlib-js/stdlib/commit/2c4e5d824e0c5dc8fd536bf79ff565cee100ce46) - **build:** disable additional lint rule in TS tests _(by Philipp Burckhardt)_
 
 </details>
@@ -24,8 +36,9 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
+-   Athan Reines
 -   Philipp Burckhardt
 
 </section>
