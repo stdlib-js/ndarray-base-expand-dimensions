@@ -78,31 +78,32 @@ var expandDimensions = require( '@stdlib/ndarray-base-expand-dimensions' );
 Expands the shape of an array `x` by inserting a new dimension of size one at a specified `axis`.
 
 ```javascript
+var getShape = require( '@stdlib/ndarray-shape' );
 var array = require( '@stdlib/ndarray-array' );
 
 // Create a 2x2 ndarray:
 var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
-// returns <ndarray>
+// returns <ndarray>[ [ 1, 2 ], [ 3, 4 ] ]
 
 // Prepend a singleton dimension:
 var y = expandDimensions( x, 0 );
-// returns <ndarray>
+// returns <ndarray>[ [ [ 1, 2 ], [ 3, 4 ] ] ]
 
-var sh = y.shape;
+var sh = getShape( y );
 // returns [ 1, 2, 2 ]
 
 // Append a singleton dimension:
 y = expandDimensions( x, 2 );
-// returns <ndarray>
+// returns <ndarray>[ [ [ 1 ], [ 2 ] ], [ [ 3 ], [ 4 ] ] ]
 
-sh = y.shape;
+sh = getShape( y );
 // returns [ 2, 2, 1 ]
 
 // Insert a singleton dimension:
 y = expandDimensions( x, 1 );
-// returns <ndarray>
+// returns <ndarray>[ [ [ 1, 2 ] ], [ [ 3, 4 ] ] ]
 
-sh = y.shape;
+sh = getShape( y );
 // returns [ 2, 1, 2 ]
 ```
 
@@ -134,6 +135,7 @@ sh = y.shape;
 var array = require( '@stdlib/ndarray-array' );
 var numel = require( '@stdlib/ndarray-base-numel' );
 var ind2sub = require( '@stdlib/ndarray-ind2sub' );
+var getShape = require( '@stdlib/ndarray-shape' );
 var expandDimensions = require( '@stdlib/ndarray-base-expand-dimensions' );
 
 // Create a 2-dimensional array:
@@ -145,7 +147,7 @@ var y = expandDimensions( x, 1 );
 // returns <ndarray>
 
 // Retrieve the shape:
-var sh = y.shape;
+var sh = getShape( y );
 // returns [ 2, 1, 2 ]
 
 // Retrieve the number of elements:
@@ -230,8 +232,8 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 -->
 
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
+[chat-image]: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
+[chat-url]: https://stdlib.zulipchat.com
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
