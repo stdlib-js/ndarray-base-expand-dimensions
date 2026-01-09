@@ -44,6 +44,7 @@
 
 <details>
 
+-   [`8ea33d5`](https://github.com/stdlib-js/stdlib/commit/8ea33d58d9a5beb31e6023ceaf331fc4175c74fa) - **docs:** rename parameter _(by Athan Reines)_
 -   [`5149a6b`](https://github.com/stdlib-js/stdlib/commit/5149a6b650b60568bd0df248c2a97a3d8ca2ca87) - **chore:** minor clean-up _(by Philipp Burckhardt)_
 -   [`f475c84`](https://github.com/stdlib-js/stdlib/commit/f475c843a4b1579eef6533e464e4c16766d7ecdd) - **feat:** add writable parameter to `ndarray/base/expand-dimensions` [(#9476)](https://github.com/stdlib-js/stdlib/pull/9476) _(by Muhammad Haris, Athan Reines)_
 -   [`508b9b9`](https://github.com/stdlib-js/stdlib/commit/508b9b99fc2547eb50be79ade7f68a34c5fd2146) - **docs:** update examples and use accessor functions _(by Athan Reines)_

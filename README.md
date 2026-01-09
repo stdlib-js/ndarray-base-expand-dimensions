@@ -33,7 +33,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Expand the shape of an array by inserting a new dimension of size one at a specified axis.
+> Expand the shape of an array by inserting a new dimension of size one at a specified dimension index.
 
 <!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
 
@@ -73,9 +73,9 @@ To view installation and usage instructions specific to each branch build, be su
 var expandDimensions = require( '@stdlib/ndarray-base-expand-dimensions' );
 ```
 
-#### expandDimensions( x, axis, writable )
+#### expandDimensions( x, dim, writable )
 
-Expands the shape of an array `x` by inserting a new dimension of size one at a specified `axis`.
+Expands the shape of an array `x` by inserting a new dimension of size one at a specified dimension index.
 
 ```javascript
 var getShape = require( '@stdlib/ndarray-shape' );
@@ -110,7 +110,7 @@ sh = getShape( y );
 The function accepts the following arguments:
 
 -   **x**: input ndarray.
--   **axis**: axis at which to insert a singleton dimension.
+-   **dim**: dimension index at which to insert a singleton dimension.
 -   **writable**: boolean indicating whether a returned ndarray should be writable.
 
 </section>
@@ -123,7 +123,7 @@ The function accepts the following arguments:
 
 ## Notes
 
--   A provided axis must reside on the interval `[-N-1, N]`, where `N` is the rank (i.e., number of dimensions) of the provided input array. If provided a negative `axis`, the axis position at which to insert a singleton dimension is computed as `N + axis + 1`. Hence, if provided `-1`, the resolved axis position is `N` (i.e., a singleton dimension is appended to the input array).
+-   A provided dimension index must reside on the interval `[-N-1, N]`, where `N` is the rank (i.e., number of dimensions) of the provided input array. If provided a negative dimension index, the position at which to insert a singleton dimension is computed as `N + dim + 1`. Hence, if provided `-1`, the resolved position is `N` (i.e., a singleton dimension is appended to the input array).
 -   The `writable` parameter **only** applies to ndarray constructors supporting **read-only** instances.
 
 </section>
