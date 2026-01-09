@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-12-30)
+## Unreleased (2026-01-09)
+
+<section class="features">
+
+### Features
+
+-   [`f475c84`](https://github.com/stdlib-js/stdlib/commit/f475c843a4b1579eef6533e464e4c16766d7ecdd) - add writable parameter to `ndarray/base/expand-dimensions` [(#9476)](https://github.com/stdlib-js/stdlib/pull/9476)
+
+</section>
+
+<!-- /.features -->
 
 <section class="bug-fixes">
 
@@ -16,12 +26,25 @@
 
 <!-- /.bug-fixes -->
 
+<section class="breaking-changes">
+
+### BREAKING CHANGES
+
+-   [`f475c84`](https://github.com/stdlib-js/stdlib/commit/f475c843a4b1579eef6533e464e4c16766d7ecdd): add `writable` parameter
+
+    -   To migrate, users should explicitly provide a third argument indicating whether to return a read-only ndarray. To preserve prior behavior, users should provide a boolean based on whether an input ndarray is read-only.
+
+</section>
+
+<!-- /.breaking-changes -->
+
 <section class="commits">
 
 ### Commits
 
 <details>
 
+-   [`f475c84`](https://github.com/stdlib-js/stdlib/commit/f475c843a4b1579eef6533e464e4c16766d7ecdd) - **feat:** add writable parameter to `ndarray/base/expand-dimensions` [(#9476)](https://github.com/stdlib-js/stdlib/pull/9476) _(by Muhammad Haris, Athan Reines)_
 -   [`508b9b9`](https://github.com/stdlib-js/stdlib/commit/508b9b99fc2547eb50be79ade7f68a34c5fd2146) - **docs:** update examples and use accessor functions _(by Athan Reines)_
 -   [`712a9a8`](https://github.com/stdlib-js/stdlib/commit/712a9a8554f59fdfe520c4e2daafdbfd93637c76) - **fix:** compute singleton strides as if strides computed apriori _(by Athan Reines)_
 -   [`c634089`](https://github.com/stdlib-js/stdlib/commit/c634089f1fdf724c589c016b55da015a1d779709) - **refactor:** use ndarray utility to normalize an index _(by Athan Reines)_
@@ -37,9 +60,10 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
+-   Muhammad Haris
 -   Philipp Burckhardt
 
 </section>
