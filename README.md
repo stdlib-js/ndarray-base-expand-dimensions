@@ -45,41 +45,35 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-base-expand-dimensions
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-expandDimensions = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-expand-dimensions@umd/browser.js' )
+var expandDimensions = require( '@stdlib/ndarray-base-expand-dimensions' );
 ```
 
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var expandDimensions = require( 'path/to/vendor/umd/ndarray-base-expand-dimensions/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-expand-dimensions@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.expandDimensions;
-})();
-</script>
-```
-
-#### expandDimensions( x, axis )
+#### expandDimensions( x, axis, writable )
 
 Expands the shape of an array `x` by inserting a new dimension of size one at a specified `axis`.
 
@@ -92,26 +86,32 @@ var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
 // returns <ndarray>[ [ 1, 2 ], [ 3, 4 ] ]
 
 // Prepend a singleton dimension:
-var y = expandDimensions( x, 0 );
+var y = expandDimensions( x, 0, false );
 // returns <ndarray>[ [ [ 1, 2 ], [ 3, 4 ] ] ]
 
 var sh = getShape( y );
 // returns [ 1, 2, 2 ]
 
 // Append a singleton dimension:
-y = expandDimensions( x, 2 );
+y = expandDimensions( x, 2, false );
 // returns <ndarray>[ [ [ 1 ], [ 2 ] ], [ [ 3 ], [ 4 ] ] ]
 
 sh = getShape( y );
 // returns [ 2, 2, 1 ]
 
 // Insert a singleton dimension:
-y = expandDimensions( x, 1 );
+y = expandDimensions( x, 1, false );
 // returns <ndarray>[ [ [ 1, 2 ] ], [ [ 3, 4 ] ] ]
 
 sh = getShape( y );
 // returns [ 2, 1, 2 ]
 ```
+
+The function accepts the following arguments:
+
+-   **x**: input ndarray.
+-   **axis**: axis at which to insert a singleton dimension
+-   **writable**: boolean indicating whether a returned ndarray should be writable.
 
 </section>
 
@@ -124,6 +124,7 @@ sh = getShape( y );
 ## Notes
 
 -   A provided axis must reside on the interval `[-N-1, N]`, where `N` is the rank (i.e., number of dimensions) of the provided input array. If provided a negative `axis`, the axis position at which to insert a singleton dimension is computed as `N + axis + 1`. Hence, if provided `-1`, the resolved axis position is `N` (i.e., a singleton dimension is appended to the input array).
+-   The `writable` parameter **only** applies to ndarray constructors supporting **read-only** instances.
 
 </section>
 
@@ -137,43 +138,16 @@ sh = getShape( y );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-numel@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ind2sub@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-shape@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-expand-dimensions@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var uniform = require( '@stdlib/random-uniform' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
+var expandDimensions = require( '@stdlib/ndarray-base-expand-dimensions' );
 
-// Create a 2-dimensional array:
-var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
-// returns <ndarray>
+var x = uniform( [ 3, 3, 3 ], -10.0, 10.0 );
+console.log( ndarray2array( x ) );
 
-// Insert a singleton dimension:
-var y = expandDimensions( x, 1 );
-// returns <ndarray>
-
-// Retrieve the shape:
-var sh = getShape( y );
-// returns [ 2, 1, 2 ]
-
-// Retrieve the number of elements:
-var N = numel( sh );
-
-// Loop through the array elements...
-var i;
-for ( i = 0; i < N; i++ ) {
-    console.log( 'Y[%s] = %d', ind2sub( sh, i ).join( ', ' ), y.iget( i ) );
-}
-
-})();
-</script>
-</body>
-</html>
+var y = expandDimensions( x, 1, false );
+console.log( ndarray2array( y ) );
 ```
 
 </section>
@@ -222,7 +196,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
