@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/ndarray-base-expand-dimensions",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Expand the shape of an array by inserting a new dimension of size one at a specified axis.",
   "license": "Apache-2.0",
   "author": {
@@ -37,7 +37,7 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/ndarray-base-assert-is-row-major-string": "github:stdlib-js/ndarray-base-assert-is-row-major-string#main",
+    "@stdlib/ndarray-base-assert-is-row-major-string": "^0.1.0",
     "@stdlib/ndarray-base-data-buffer": "^0.2.2",
     "@stdlib/ndarray-base-dtype": "^0.2.2",
     "@stdlib/ndarray-base-normalize-index": "^0.2.2",
@@ -99,7 +99,6 @@
     "utils",
     "util"
   ],
-  "__stdlib__": {},
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/stdlib"
