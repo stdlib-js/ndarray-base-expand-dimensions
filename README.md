@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import expandDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-expand-dimensions@esm/index.mjs';
+import expandDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-expand-dimensions@v0.3.1-esm/index.mjs';
 ```
 
 #### expandDimensions( x, dim, writable )
@@ -128,7 +128,7 @@ The function accepts the following arguments:
 
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-uniform@esm/index.mjs';
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
-import expandDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-expand-dimensions@esm/index.mjs';
+import expandDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-expand-dimensions@v0.3.1-esm/index.mjs';
 
 var x = uniform( [ 3, 3, 3 ], -10.0, 10.0 );
 console.log( ndarray2array( x ) );
