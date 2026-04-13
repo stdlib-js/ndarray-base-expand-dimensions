@@ -2,6 +2,50 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2026-04-13)
+
+<section class="bug-fixes">
+
+### Bug Fixes
+
+-   [`c20c5d6`](https://github.com/stdlib-js/stdlib/commit/c20c5d602a0f897e86d7fbd83180fec84c535984) - determine layout based on physical layout
+
+</section>
+
+<!-- /.bug-fixes -->
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`c20c5d6`](https://github.com/stdlib-js/stdlib/commit/c20c5d602a0f897e86d7fbd83180fec84c535984) - **fix:** determine layout based on physical layout _(by Athan Reines)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 1 person contributed to this release. Thank you to this contributor:
+
+-   Athan Reines
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.3.1">
 
 ## 0.3.1 (2026-02-08)
