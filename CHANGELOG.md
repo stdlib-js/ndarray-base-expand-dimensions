@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-05-09)
+## Unreleased (2026-05-18)
 
 <section class="bug-fixes">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`9451399`](https://github.com/stdlib-js/stdlib/commit/9451399044acb8234933b4a35723347e45def52a) - **bench:** refactor to use string interpolation in `ndarray/base` [(#11432)](https://github.com/stdlib-js/stdlib/pull/11432) _(by Karan Anand)_
 -   [`c20c5d6`](https://github.com/stdlib-js/stdlib/commit/c20c5d602a0f897e86d7fbd83180fec84c535984) - **fix:** determine layout based on physical layout _(by Athan Reines)_
 
 </details>
@@ -34,9 +35,10 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
+-   Karan Anand
 
 </section>
 
